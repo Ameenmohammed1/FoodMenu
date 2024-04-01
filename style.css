@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Manrope:wght@200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar .image{
+    width: 100%;
+    height: 10vh;
+    background: url('./images/pexels-viktoria-alipatova-2074130.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.payment{
+    position: absolute;
+    width: 70px;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    border: 3px solid #ff0000;
+}
+.navbar .title{
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
+    gap: 10px;
+}
+
+.navbar .title .sname{
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+/* dishes */
+
+.dishes{
+    width: 100%;
+    height: 6vh;
+    background: #f0efef;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.dishes .active{
+    color: rgb(247, 89, 41);
+}
+
+.cards{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.cards .card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card .images{
+    width: 20%;
+}
+
+.card .images img{
+width: 65px;
+height: 65px;
+border-radius: 50%;
+}
+
+.card .content{
+display: flex;
+flex-direction: column;
+width: 60%;
+
+}
+
+.card .content .title{
+    font-family: "Almarai", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+.card .content .para{
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .9rem;
+    width: 80%;
+    line-height: 22px;
+    overflow: hidden;
+}
+.card .prc{
+width: 20%;
+}
+.card .prc p{
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(247, 89, 41);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+@media screen and (main-width : 900px) {
+
+   
+    
+}
