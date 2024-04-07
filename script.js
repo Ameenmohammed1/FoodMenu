@@ -1,4 +1,5 @@
 let cards = document.querySelector(".cards");
+let footerp = document.querySelector(".footerp");
 let getApi = 'https://script.google.com/macros/s/AKfycbyc72F11GudEPHXTIDOazinHS6-uhn6YnBEsOK3ei_WwsgtaiQkMo6SB8pdDb1rsRM/exec';
 let data
 
@@ -236,4 +237,7 @@ category('')
 
 getData()
 
-console.log(data);
+const date = new Date();
+const year = date.getFullYear();
+console.log(year);
+footerp.innerHTML = `Food Menu All Copyringht reserved ${year} <br>Designed By - <a href="https://api.whatsapp.com/send?phone=+919846515561&text=I need Digital Food Menu List.">MirrorSoft</a>`
