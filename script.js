@@ -196,6 +196,7 @@ function category(name,cname) {
     card.appendChild(images);
 
     let img = document.createElement("img");
+    img.classList.add("productImg"); 
     img.src = image;
     images.appendChild(img);
 
@@ -237,6 +238,8 @@ category('')
 }
 
 getData()
+
+
 
 const date = new Date();
 const year = date.getFullYear();
