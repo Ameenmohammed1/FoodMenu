@@ -231,7 +231,8 @@ function getData(){
 data = res;
 category('')
   }).catch((err)=>{
-    window.location.reload()
+  //  alert("Are You Online ?")
+  window.location.reload();
   })
 }
 

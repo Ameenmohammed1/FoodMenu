@@ -23,7 +23,7 @@
   color: #ffffff;
   text-decoration: none;
   padding: 15px 15px;
-  background: #f70d0d;
+  background: #ff3535;
   font-family: sans-serif;
   text-align: center;
   border: 2px solid #fff;
@@ -180,6 +180,20 @@
   height: 35px;
   width: 35px;
 }
+.review{
+  padding: 5px 7px;
+  text-decoration: none;
+  background-color: #ffe70f;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1;
+}
+.rimg{
+  height: 15px;
+  width: 16px;
+  padding-right: 3px;
+}
 
 @media screen and (max-width: 600px) {
   .footer {
@@ -202,6 +216,8 @@
   }
 
   .details {
-    height: 5vh;
+    min-height: 5vh;
+    height: auto;
+    padding: 5px 10px;
   }
 }
