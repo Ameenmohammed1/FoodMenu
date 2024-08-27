@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Food Menu</title>
+    <link
+    rel="stylesheet"
+    href="./swiper.css"
+  />  
+  
 </head>
 <body>
     <div class="container">
@@ -14,38 +19,90 @@
             <a class="review" href="https://www.google.com/maps/place/Thriveni+Bake+World/@8.8257249,76.9255722,17z/data=!4m8!3m7!1s0x3b05db0ddf28fd0d:0x455bb65b1a980b2b!8m2!3d8.8257196!4d76.9281471!9m1!1b1!16s%2Fg%2F11s7dk65nb/reviews"><img src="./icon/google.png" alt="" class="rimg">Review
             </a>
         </div>
-        <a  class="payment" href="upi://pay?pa=9846515561@axl&pn=**5561&mc=0000&mode=02&purpose=00">
+        <!-- <a  class="payment" href="upi://pay?pa=9846515561@axl&pn=**5561&mc=0000&mode=02&purpose=00">
             Pay Now
-        </a>
+        </a> -->
            <a href="https://wa.me/9846486663/?text=Order Enquiry">
             <button class="whatsappBTN"><img src="./icon/whatsapp.png" alt=""></button>
            </a>
 
         <div class="navbar">
-           <div class="image">
-           </div>
+           <!-- <div class="image">
+           </div> -->
            <div class="title">
             <h1 class="sname">Triveni Bakery</h1>
             <p class="short">Restuarent - Drinks - cocktail </p>
            </div>
         </div>
         <div class="dishes">
-            <div onclick="category('Special','dish1')" class="dish dish1">
+            <a href="#special" onclick="category('Special','dish1')" class="dish dish1">
                 <p>Special</p>
-            </div>
-            <div onclick="category('Drinks','dish2')" class="dish dish2">
+            </a>
+            <a href="#drinks" onclick="category('Drinks','dish2')" class="dish dish2">
                 <p>Drinks</p>
-            </div>
-            <div onclick="category('Deserts','dish3')" class="dish dish3">
-                <p>Deserts</p>
-            </div>
-            <div onclick="category('Snacks','dish4')" class="dish dish4">
+            </a>
+            <a href="#snacks" onclick="category('Deserts','dish3')" class="dish dish3">
                 <p>Snacks</p>
+            </a>
+            <a href="#deserts" onclick="category('Deserts','dish3')" class="dish dish3">
+                <p>Deserts</p>
+            </a>
+     
+
+        </div>
+        <div class="spetial">
+            <h1>Special Dishes</h1>
+
+            <div class="scards">
+               
+
+                 <!-- <div class="swiper-container">
+                  <div class="swiper-wrapper" id="special" style="display: flex; gap: 10px;">
+                   
+                  </div>
+               
+                  <div class="swiper-pagination"></div>
+               
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>  -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper" id="special">
+                 
+                </div>
+                <!-- If we need pagination -->
+             
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+               
+              </div>
+            </div>
+        </div>
+        <div class="foodCards">
+            <h1>Special Drinks</h1>
+            <div class="fcards" id="drinks">
+               
+            </div>
+        </div>
+        <div class="foodCards">
+            <h1>Special Snacks</h1>
+            <div class="fcards" id="snacks">
+                
+            </div>
+        </div>
+        <div class="foodCards">
+            <h1>Special Deserts</h1>
+            <div class="fcards" id="deserts">
+               
             </div>
         </div>
 
-        <div class="cards">
-            <!-- <div class="card">
+        <!-- <div class="cards">
+             <div class="card">
                 <div class="images">
                     <img src="https://www.pavaniskitchen.com/wp-content/uploads/2023/04/egg-puffs.jpg" alt="">
                 </div>
@@ -57,11 +114,13 @@
                     <p>$12.00</p>
                 </div>
             </div>
-        </div> -->
-    </div>
+        </div> 
+    </div> -->
 <div class="footer">
     <p class="footerp"></p>
 </div>
+<script src="./swiper.js"></script>
+
     <script src="./script.js"></script>
 </body>
 </html>

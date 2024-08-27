@@ -3,6 +3,35 @@ let footerp = document.querySelector(".footerp");
 let getApi = 'https://script.google.com/macros/s/AKfycbyc72F11GudEPHXTIDOazinHS6-uhn6YnBEsOK3ei_WwsgtaiQkMo6SB8pdDb1rsRM/exec';
 let data
 
+var swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+ 
+  // Breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+    },
+    
+    480: {
+        slidesPerView: 3,
+        spaceBetween: 20
+    },
+    1024: {
+        slidesPerView: 6,
+        spaceBetween: 20
+    }
+}
+});
+
 data = [
   {
     image: "./images/egg-puffs.jpg",
@@ -224,21 +253,55 @@ function category(name,cname) {
   });
 }
 
-category("");
+function filterData(cate,parent){
+let parentDiv = document.getElementById(parent);
+parentDiv.innerHTML = '';
+ let newData = data.filter((val)=>val.category == cate );
+console.log(newData);
+
+ newData.map((val)=>{
+  parentDiv.innerHTML +=`<div class="fcard">
+                    <img src="${val.image}" alt="">
+                  <div class="fcontent">
+                    <p class="fname">${val.name}</p>
+                    <p class="fprice">₹ ${val.price}</p>
+                  </div>
+                </div>`
+})
+}
+function specialFood(cate,parent){
+let parentDiv = document.getElementById("special");
+
+ let newData = data.filter((val)=>val.category == "Special" );
+console.log(newData);
+parentDiv.innerHTML = '';
+ newData.map((val)=>{
+  parentDiv.innerHTML +=` <div class="scard swiper-slide">
+                      <img class="specialImage" src="${val.image}" alt="Burger image">
+                      <p class="sname">${val.name}</p>
+                  <p class="sprice">₹ ${val.price}</p>
+                  </div>`
+})
+}
+
+// category("");
 function getData(){
   fetch(getApi).then(response => response.json())
   .then(res => {
     console.log(res);
 data = res;
-category('')
-  }).catch((err)=>{
-  //  alert("Are You Online ?")
-  window.location.reload();
+filterData("Drinks","drinks");
+filterData("Snacks","snacks");
+filterData("Deserts","deserts");
+specialFood()
   })
 }
 
 getData()
-
+filterData("Drinks","drinks");
+filterData("Snacks","snacks");
+filterData("Deserts","deserts");
+specialFood()
 
 
 const date = new Date();

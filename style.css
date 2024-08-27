@@ -5,7 +5,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+}
+
+
 .navbar .image {
   width: 100%;
   height: 14vh;
@@ -48,18 +57,29 @@
 /* dishes */
 
 .dishes {
-  width: 100%;
-  height: 6vh;
-  background: #f0efef;
+  width: auto;
+  height: auto;
+  background: #ffffff;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: space-evenly;
   align-items: center;
   font-family: "Almarai", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
-}
+  padding: 10px;
 
+}
+.dishes .dish{
+  text-decoration: none;
+  color: #000;
+ padding: 10px 15px;
+ border-radius: 10px;
+  background: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .dishes .active {
   color: rgb(247, 89, 41);
 }
@@ -195,6 +215,104 @@
   padding-right: 3px;
 }
 
+/* special dishes */
+.spetial{
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+
+}
+.spetial h1{
+  font-size: 1.3rem;
+}
+
+.spetial .scards{
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+}
+
+.scards .scard{
+  width: 130px;
+  height: 200px;
+  margin: 10px 0px;
+margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+padding: 10px;
+background: #ffffff;
+
+}
+.scard img{
+  width: 100px;
+  height: 120px;
+}
+.scard .sname{
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+.scard .sprice{
+  margin-top: 0.3rem;
+  font-weight: 600;
+  color: forestgreen;
+}
+
+/* foodCards */
+.foodCards{
+  width: 100%;
+  padding-left: 20px;
+margin-top: 1rem;
+
+
+}
+
+.foodCards h1{
+  font-size: 1.3rem
+}
+.foodCards .fcards{
+  width: 100%;
+  height: auto;
+ 
+
+}
+.fcards .fcard{
+  margin-top: 0.5rem;
+  padding: 10px;
+  border-bottom: 2px solid #d6d6d6;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+}
+.fcard img{
+  width: 90px;
+  height: 90px;
+border-radius: 10px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.fcard .fcontent{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fcontent .fname{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.fcontent .fprice{
+  /* font-weight: 600; */
+  color: forestgreen;
+  font-size: 1.2rem;
+}
 
 @media screen and (max-width: 600px) {
   .footer {
@@ -221,4 +339,23 @@
     height: auto;
     padding: 5px 10px;
   }
+}
+
+
+/* Custom scrollbar for WebKit browsers */
+.dishes::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the draggable part of the scrollbar */
+  border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when the scrollbar is hovered */
 }
