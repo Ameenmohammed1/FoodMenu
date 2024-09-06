@@ -171,7 +171,8 @@
   align-items: center;
   padding-left: 20px;
   font-weight: 600;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.5rem;
   padding-right: 20px;
 }
 
@@ -180,39 +181,21 @@
   font-weight: 400;
 }
 
-.whatsappBTN {
-  position: fixed;
 
-  bottom: 9vh;
-  right: 2vh;
-  background: rgb(59, 255, 59);
-  border-radius: 50px;
-  border: 0;
-  padding: 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-
-}
-
-.whatsappBTN img {
-  height: 35px;
-  width: 35px;
-}
 .review{
-  padding: 5px 7px;
+  padding: 0px 7px;
+  height: 30px;
   text-decoration: none;
-  background-color: #ffe70f;
+  background-color: #ffd901;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  gap: 1;
+  
 }
 .rimg{
   height: 15px;
-  width: 16px;
-  padding-right: 3px;
+ 
+ 
 }
 
 /* special dishes */
@@ -314,6 +297,94 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   font-size: 1.2rem;
 }
 
+/* menu setup */
+
+
+.menuBtn{
+  position: fixed;
+  bottom: 9vh;
+  right: 2vh;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  border: none;
+  z-index: 92;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #d9ff00;
+}
+.whatsappBTN {
+  position: absolute;
+
+  
+  background: rgb(59, 255, 59);
+  border-radius: 50px;
+  border: 0;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.whatsappBTN img {
+  height: 35px;
+  width: 35px;
+}
+
+.overlaymenu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  display: none;
+width: 100%;
+height: 100vh;
+
+background: #00000080;
+
+}
+.omenu{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.subLayer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.closeBtn{
+position: absolute;
+top: 10%;
+right: 10%;
+background: transparent;
+border: none;
+
+}
+
+.closeBtn img{
+  height: 30px;
+}
+
+.odish{
+  text-decoration: none;
+  color: #000;
+ padding: 10px 15px;
+ border-radius: 10px;
+  background: #d8d5d5;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 @media screen and (max-width: 600px) {
   .footer {
     width: 100%;
@@ -321,7 +392,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: #8d8d8d;
     color: #fff;
     text-align: center;
     line-height: 22px;

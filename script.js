@@ -189,69 +189,7 @@ data = [
     price: "Load..",
   },
 ];
-function category(name,cname) {
-    cards.innerHTML = '';
 
-    let categorys = document.querySelectorAll('.dish');
-    for (let i = 0; i < categorys.length; i++) {
-        categorys[i].classList.remove('active')
-        
-    }
-
-   if(cname){
-    let category = document.querySelector(`.${cname}`);
-    category.classList.add('active')
-   }else{
-    let category = document.querySelector(`.dish1`);
-    category.classList.add('active')
-   }
-
-
-  let newArr;
-
-  if (name) {
-    newArr = data.filter((val) => val.category == `${name ? name : ""}`);
-  } else {
-    newArr = data.filter((val) => val.category == "Special");
-  }
-
-  newArr.forEach(({ image, name, para, price, category }) => {
-    let card = document.createElement("div");
-    card.classList.add("card");
-    cards.appendChild(card);
-
-    let images = document.createElement("div");
-    images.classList.add("images");
-    card.appendChild(images);
-
-    let img = document.createElement("img");
-    img.classList.add("productImg"); 
-    img.src = image;
-    images.appendChild(img);
-
-    let content = document.createElement("div");
-    content.classList.add("content");
-    card.appendChild(content);
-
-    let title = document.createElement("p");
-    title.classList.add("title");
-    title.textContent = name;
-    content.appendChild(title);
-
-    let parag = document.createElement("p");
-    parag.classList.add("para");
-    parag.textContent = para;
-    content.appendChild(parag);
-
-    let prc = document.createElement("div");
-    prc.classList.add("prc");
-    card.appendChild(prc);
-
-    let prices = document.createElement("p");
-    prices.textContent = price;
-    prc.appendChild(prices);
-  });
-}
 
 function filterData(cate,parent){
 let parentDiv = document.getElementById(parent);
@@ -296,6 +234,21 @@ filterData("Deserts","deserts");
 specialFood()
   })
 }
+
+function openMenu(){
+  console.log("hello");
+  
+  let menu = document.querySelector('.overlaymenu');
+  menu.style.display = 'block';
+}
+
+function closeMenu(){
+  let menu = document.querySelector('.overlaymenu');
+  menu.style.display = 'none';
+}
+
+let menuBtn = document.querySelector('.menuBtn');
+menuBtn.addEventListener('click',openMenu)
 
 getData()
 filterData("Drinks","drinks");

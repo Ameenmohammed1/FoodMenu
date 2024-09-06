@@ -15,23 +15,57 @@
     <div class="container">
     
         <div class="details">
-            <p>Delivery Available : <a href="tel:+91 9846515561">+91 9846515561</a></p>
-            <a class="review" href="https://www.google.com/maps/place/Thriveni+Bake+World/@8.8257249,76.9255722,17z/data=!4m8!3m7!1s0x3b05db0ddf28fd0d:0x455bb65b1a980b2b!8m2!3d8.8257196!4d76.9281471!9m1!1b1!16s%2Fg%2F11s7dk65nb/reviews"><img src="./icon/google.png" alt="" class="rimg">Review
+            <!-- <p>Delivery Available : <a href="tel:+91 9846515561">+91 9846515561</a></p> -->
+             
+          
+            <a class="contactIcon" href="https://wa.me/919846515561?text=Contacting For Order">
+                <img style="height: 30px;" src="./icon/whatsapp-box.png" alt="">
+            </a>
+            <a class="contactIcon" href="tel:+91 9846515561">
+                <img style="height: 31px;" src="./icon/mobile.png" alt="">
+            </a>
+            <a class="contactIcon" href="https://g.co/kgs/H1s6qLd">
+                <img style="height: 31px;" src="./icon/google-maps.png" alt="">
             </a>
         </div>
         <!-- <a  class="payment" href="upi://pay?pa=9846515561@axl&pn=**5561&mc=0000&mode=02&purpose=00">
             Pay Now
         </a> -->
-           <a href="https://wa.me/9846486663/?text=Order Enquiry">
-            <button class="whatsappBTN"><img src="./icon/whatsapp.png" alt=""></button>
-           </a>
+           
+           
+               <button class="menuBtn">
+                <img style="height: 35px;" src="./icon/menu.png" alt="">
+               </button>
+          
+
+           <div class="overlaymenu">
+            <div class="subLayer">
+                <button onclick="closeMenu()" class="closeBtn"><img src="./icon/close.png" alt=""></button>
+               <div class="omenu">
+
+              
+                <a href="#special"  class="odish " onchange="closeMenu()">
+                    <p>Special</p>
+                </a>
+                <a href="#drinks"  class="odish " onchange="closeMenu()">
+                    <p>Drinks</p>
+                </a>
+                <a href="#snacks"  class="odish " onchange="closeMenu()">
+                    <p>Snacks</p>
+                </a>
+                <a href="#deserts"  class="odish " onchange="closeMenu()">
+                    <p>Desserts</p>
+                </a>
+            </div>
+        </div>
+           </div>
 
         <div class="navbar">
            <!-- <div class="image">
            </div> -->
            <div class="title">
             <h1 class="sname">Triveni Bakery</h1>
-            <p class="short">Restuarent - Drinks - cocktail </p>
+            <p class="short">Restaurant - Drinks - cocktail </p>
            </div>
         </div>
         <div class="dishes">
@@ -45,13 +79,13 @@
                 <p>Snacks</p>
             </a>
             <a href="#deserts" onclick="category('Deserts','dish3')" class="dish dish3">
-                <p>Deserts</p>
+                <p>Desserts</p>
             </a>
      
 
         </div>
         <div class="spetial">
-            <h1>Special Dishes</h1>
+            <h1>Special Dishes.</h1>
 
             <div class="scards">
                
@@ -83,19 +117,19 @@
             </div>
         </div>
         <div class="foodCards">
-            <h1>Special Drinks</h1>
+            <h1>Special Drinks.</h1>
             <div class="fcards" id="drinks">
                
             </div>
         </div>
         <div class="foodCards">
-            <h1>Special Snacks</h1>
+            <h1>Special Snacks.</h1>
             <div class="fcards" id="snacks">
                 
             </div>
         </div>
         <div class="foodCards">
-            <h1>Special Deserts</h1>
+            <h1>Special Desserts.</h1>
             <div class="fcards" id="deserts">
                
             </div>
