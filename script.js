@@ -234,17 +234,26 @@ filterData("Deserts","deserts");
 specialFood()
   })
 }
-
+let menuStatus = true;
 function openMenu(){
-  console.log("hello");
   
-  let menu = document.querySelector('.overlaymenu');
-  menu.style.display = 'block';
+  if(menuStatus){
+
+    let menu = document.querySelector('.overlaymenu');
+    menu.style.display = 'block';
+    menuStatus=false;
+  }else{
+    let menu = document.querySelector('.overlaymenu');
+    menu.style.display = 'none';
+    menuStatus=true;
+  }
 }
 
+
 function closeMenu(){
-  let menu = document.querySelector('.overlaymenu');
-  menu.style.display = 'none';
+    let menu = document.querySelector('.overlaymenu');
+    menu.style.display = 'none';
+    menuStatus=true;
 }
 
 let menuBtn = document.querySelector('.menuBtn');
